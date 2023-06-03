@@ -24,7 +24,7 @@ const TypedGreetings = () => {
     };
   }, []);
 
-  return <span className="font-mono" ref={el}></span>;
+  return <span ref={el}></span>;
 };
 TypedGreetings.displayName = "TypedGreetings";
 export default TypedGreetings;
