@@ -12,6 +12,7 @@
     "prettier:check": "npx prettier --check src"
   },
   "dependencies": {
+    "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
