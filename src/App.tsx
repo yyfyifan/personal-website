@@ -1,7 +1,12 @@
 import "./App.css";
+import FrontPage from "./FrontPage";
 
 function App() {
-  return <div className="text-3xl font-bold underline">Personal Website</div>;
+  return (
+    <div className="bg-white px-10 text-3xl">
+      <FrontPage />
+    </div>
+  );
 }
 
 export default App;
