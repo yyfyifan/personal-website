@@ -1,11 +1,14 @@
 import "./App.css";
+import DarkModeContextProvider from "./contexts/dark-mode/DarkModeContextProvider";
 import FrontPage from "./FrontPage";
 
 function App() {
   return (
-    <div className="bg-white px-10 text-3xl">
-      <FrontPage />
-    </div>
+    <DarkModeContextProvider>
+      <div className="bg-white px-10 text-3xl dark:bg-gray-900">
+        <FrontPage />
+      </div>
+    </DarkModeContextProvider>
   );
 }
 

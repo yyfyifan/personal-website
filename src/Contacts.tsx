@@ -1,7 +1,10 @@
 import { AiFillGithub, AiFillLinkedin, AiTwotoneMail } from "react-icons/ai";
 const Contacts = () => {
   return (
-    <section id="contacts" className="flex justify-center gap-16 py-3 text-gray-600">
+    <section
+      id="contacts"
+      className="flex justify-center gap-16 py-3 
+        text-gray-600 dark:text-gray-200">
       <AiFillGithub />
       <AiFillLinkedin />
       <AiTwotoneMail />

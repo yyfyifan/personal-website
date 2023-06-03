@@ -1,4 +1,4 @@
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import DarkModeSwitcher from "./DarkModeSwitcher";
 
 const Nav = () => {
   return (
@@ -7,7 +7,7 @@ const Nav = () => {
       <ul className="flex items-center">
         {/* Dark Mode */}
         <li>
-          <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+          <DarkModeSwitcher />
         </li>
         {/* Resume */}
         {/* <li>
