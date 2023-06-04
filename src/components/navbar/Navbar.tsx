@@ -1,6 +1,7 @@
 import { useState } from "react";
-import DarkModeSwitcher from "./DarkModeSwitcher";
+import DarkModeSwitcher from "../DarkModeSwitcher";
 import { FaBars, FaTimes } from "react-icons/fa";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [showHamburgerButton, setShownHamburgerButton] = useState(false);
@@ -27,18 +28,8 @@ const Navbar = () => {
       <div className="md:hidden z-10" onClick={handleToggleHamburgerButton}>
         {showHamburgerButton ? <FaTimes /> : <FaBars />}
       </div>
-      {/* Mobile menu */}
-      <ul
-        className={
-          showHamburgerButton
-            ? "fixed top-0 left-0 bottom-0 right-0 text-3xl bg-white flex flex-col justify-center items-center gap-16"
-            : "hidden"
-        }>
-        <li>Home</li>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Education</li>
-      </ul>
+
+      <MobileMenu show={showHamburgerButton} />
       {/* Social icons */}
       <div className="hidden"></div>
       {/* Dark Mode */}
