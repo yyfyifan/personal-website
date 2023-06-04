@@ -3,7 +3,7 @@ import Introduction from "./Introduction";
 import Contacts from "./Contacts";
 const FrontPage = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       <Navbar />
       <Introduction />
       <Contacts />

@@ -8,8 +8,7 @@ const Introduction = () => {
       <img
         src={photo}
         alt="portrait"
-        className="relative 
-        bg-gradient-to-b from-teal-500
+        className="bg-gradient-to-b from-teal-500
         rounded-full h-40 w-40 mx-auto"
       />
       <h2 className="text-5xl py-2 text-teal-600 font-medium">👋 I'm</h2>

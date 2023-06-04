@@ -11,7 +11,9 @@ const DarkModeContextProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         When it's in dark mode, apply the class name "dark" to a top-level HTML 
         element so all descendant elements with dark: Tailwind CSS will take effect
       */}
-      <div className={classNames({ dark: isDarkMode })}>{children}</div>
+      <div className={classNames({ dark: isDarkMode })}>
+        <div className="bg-white dark:bg-gray-900">{children}</div>
+      </div>
     </darkModeContext.Provider>
   );
 };

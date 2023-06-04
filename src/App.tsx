@@ -5,7 +5,7 @@ import { FrontPage } from "./components";
 function App() {
   return (
     <DarkModeContextProvider>
-      <div className="bg-white px-10 text-3xl dark:bg-gray-900">
+      <div className="text-3xl">
         <FrontPage />
       </div>
     </DarkModeContextProvider>
