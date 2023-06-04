@@ -5,7 +5,7 @@ const DarkModeSwitcher = () => {
   const { isDarkMode, setIsDarkMode } = useDarkMode();
 
   return (
-    <div>
+    <div className="fixed bottom-4 right-4">
       {isDarkMode ? (
         <BsSun
           onClick={() => setIsDarkMode(false)}

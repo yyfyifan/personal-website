@@ -1,5 +1,4 @@
 import { useState } from "react";
-import DarkModeSwitcher from "../DarkModeSwitcher";
 import { FaBars, FaTimes } from "react-icons/fa";
 import MobileMenu from "./MobileMenu";
 
@@ -30,20 +29,6 @@ const Navbar = () => {
       </div>
 
       <MobileMenu show={showHamburgerButton} />
-      {/* Social icons */}
-      <div className="hidden"></div>
-      {/* Dark Mode */}
-      {/* <DarkModeSwitcher /> */}
-      {/* Resume */}
-      {/*
-          <a
-            href="#"
-            className="bg-gradient-to-r from-cyan-500 to-teal-500
-            block
-            text-sm text-white px-4 py-2 border-none rounded-md ml-8">
-            Resume
-          </a>
-        */}
     </nav>
   );
 };
