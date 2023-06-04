@@ -1,5 +1,5 @@
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
-import useDarkMode from "./contexts/dark-mode/useDarkMode";
+import useDarkMode from "../contexts/dark-mode/useDarkMode";
 
 const DarkModeSwitcher = () => {
   const { isDarkMode, setIsDarkMode } = useDarkMode();

@@ -1,4 +1,4 @@
-import photo from "./assets/yifan.jpg";
+import photo from "../assets/yifan.jpg";
 import TerminalWindow from "./TerminalWindow";
 import TypedGreetings from "./TypedGreetings";
 

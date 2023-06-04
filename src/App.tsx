@@ -1,6 +1,6 @@
 import "./App.css";
 import DarkModeContextProvider from "./contexts/dark-mode/DarkModeContextProvider";
-import FrontPage from "./FrontPage";
+import { FrontPage } from "./components";
 
 function App() {
   return (
