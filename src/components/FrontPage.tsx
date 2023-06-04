@@ -1,10 +1,10 @@
-import Nav from "./Nav";
+import Navbar from "./Navbar";
 import Introduction from "./Introduction";
 import Contacts from "./Contacts";
 const FrontPage = () => {
   return (
     <div className="min-h-screen ">
-      <Nav />
+      <Navbar />
       <Introduction />
       <Contacts />
     </div>

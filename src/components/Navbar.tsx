@@ -1,6 +1,6 @@
 import DarkModeSwitcher from "./DarkModeSwitcher";
 
-const Nav = () => {
+const Navbar = () => {
   return (
     <nav className="py-10 mb-12 flex justify-between">
       {/* <h1 className="font-roboto text-xxl">Yifan</h1> */}
@@ -23,5 +23,5 @@ const Nav = () => {
     </nav>
   );
 };
-Nav.displayName = "Nav";
-export default Nav;
+Navbar.displayName = "Nav";
+export default Navbar;
