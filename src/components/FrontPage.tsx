@@ -1,13 +1,13 @@
 import { Navbar, SocialIcons } from "./navbar";
-import Introduction from "./Introduction";
 import Contacts from "./Contacts";
+import { Home } from "./home";
 
 const FrontPage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
       <SocialIcons />
-      <Introduction />
+      <Home />
       <Contacts />
     </div>
   );

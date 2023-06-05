@@ -1,16 +1,12 @@
-import photo from "../assets/yifan.jpg";
+import { Element } from "react-scroll";
 import TerminalWindow from "./TerminalWindow";
 import TypedGreetings from "./TypedGreetings";
+import Avatar from "./Avatar";
 
-const Introduction = () => {
+const Home = () => {
   return (
-    <section className="text-center p-10">
-      <img
-        src={photo}
-        alt="portrait"
-        className="bg-gradient-to-b from-teal-500
-        rounded-full h-40 w-40 mx-auto"
-      />
+    <Element as="section" name="home">
+      <Avatar />
       <h2 className="text-5xl py-2 text-teal-600 font-medium">👋 I'm</h2>
       <h2 className="text-5xl py-2 text-teal-600 font-medium pb-6">Yifan Yang</h2>
       <TerminalWindow>
@@ -21,8 +17,8 @@ const Introduction = () => {
         optio perferendis fugit animi nobis quos asperiores quis aut ducimus dicta, temporibus
         voluptas nihil unde dolores, maxime saepe!
       </p>
-    </section>
+    </Element>
   );
 };
-Introduction.displayName = "Introduction";
-export default Introduction;
+Home.displayName = "Home";
+export default Home;

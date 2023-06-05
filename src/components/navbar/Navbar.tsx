@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import HamburgerButton from "./HamburgerButton";
 
 const Navbar = () => {
   const [showHamburgerButton, setShownHamburgerButton] = useState(false);
@@ -15,20 +16,12 @@ const Navbar = () => {
       <div>
         <h1 className="font-roboto text-xxl">YifanYang</h1>
       </div>
-      {/* Desktop menu */}
-      <ul className="hidden md:flex justify-between gap-8 [&>li]:cursor-pointer">
-        <li>Home</li>
-        <li>About</li>
-        <li>Experience</li>
-        <li>Education</li>
-      </ul>
-      {/* Hamburger */}
-      {/* The z-index ensures the button is not hidden by the mobile menus. */}
-      <div className="md:hidden z-10" onClick={handleToggleHamburgerButton}>
-        {showHamburgerButton ? <FaTimes /> : <FaBars />}
-      </div>
 
-      <MobileMenu show={showHamburgerButton} />
+      <DesktopMenu />
+
+      <HamburgerButton open={showHamburgerButton} onToggleOpen={handleToggleHamburgerButton} />
+
+      <MobileMenu visible={showHamburgerButton} onToggleVisibility={handleToggleHamburgerButton} />
     </nav>
   );
 };
