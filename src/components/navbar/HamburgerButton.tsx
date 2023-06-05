@@ -8,7 +8,7 @@ const HamburgerButton: React.FC<{ open: boolean; onToggleOpen: () => void }> = (
   return (
     <>
       {/* The z-index ensures the button is not hidden by the mobile menus. */}
-      <div className="md:hidden z-10" onClick={onToggleOpen}>
+      <div className="sm:hidden z-10" onClick={onToggleOpen}>
         {open ? <FaTimes /> : <FaBars />}
       </div>
     </>

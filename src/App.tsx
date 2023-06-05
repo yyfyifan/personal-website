@@ -8,7 +8,7 @@ import { Education } from "./components/education";
 function App() {
   return (
     <DarkModeContextProvider>
-      <div className="text-3xl">
+      <div>
         <FrontPage />
         <WorkExperience />
         <Education />
