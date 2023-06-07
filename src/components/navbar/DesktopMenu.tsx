@@ -1,23 +1,29 @@
+import React from "react";
 import { Link } from "react-scroll";
+
+interface MenuButton {
+  linkTo: string;
+  children: React.ReactNode;
+}
+const MenuButton: React.FC<MenuButton> = ({ linkTo, children }) => {
+  return (
+    <Link to={linkTo} smooth={true} duration={500}>
+      {children}
+    </Link>
+  );
+};
 
 const DesktopMenu = () => {
   return (
     <ul className="hidden sm:flex justify-between gap-8 [&>li]:cursor-pointer">
       <li>
-        <Link to="home" smooth={true} duration={500}>
-          Home
-        </Link>
+        <MenuButton linkTo="home">Home</MenuButton>
       </li>
       <li>
-        <Link to="experience" smooth={true} duration={500}>
-          Experience
-        </Link>
+        <MenuButton linkTo="experience">Experience</MenuButton>
       </li>
-
       <li>
-        <Link to="education" smooth={true} duration={500}>
-          Education
-        </Link>
+        <MenuButton linkTo="education">Education</MenuButton>
       </li>
     </ul>
   );
