@@ -12,12 +12,12 @@ function App() {
     <DarkModeContextProvider>
       <div className="min-h-screen">
         <Navbar />
-        <SocialIcons />
         <Home />
         <WorkExperience />
         <Education />
         <Contacts />
 
+        <SocialIcons />
         <DarkModeSwitcher />
       </div>
     </DarkModeContextProvider>

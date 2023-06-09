@@ -1,7 +1,29 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+
+interface MenuButton {
+  linkTo: string;
+  onClick: () => void;
+  children: React.ReactNode;
+}
+const MenuButton: React.FC<MenuButton> = ({ linkTo, onClick: handleClick, children }) => {
+  return (
+    <Link
+      to={linkTo}
+      smooth={true}
+      duration={500}
+      onClick={handleClick}
+      className="
+      cursor-pointer block 
+      transition duration-150 dark:hover:text-pinkred 
+       ">
+      {children}
+    </Link>
+  );
+};
+
 /**
- * The menu is hidden when the viewport is smaller than "md"
+ * The menu is hidden when the viewport is smaller than "sm"
  */
 const MobileMenu: React.FC<{ visible: boolean; onToggleVisibility: () => void }> = ({
   visible,
@@ -18,23 +40,23 @@ const MobileMenu: React.FC<{ visible: boolean; onToggleVisibility: () => void }>
       variants={variants}
       transition={{ type: "tween" }}
       className={
-        "fixed top-0 left-0 bottom-0 right-0 text-3xl bg-white flex flex-col justify-center items-center gap-16"
+        "fixed sm:hidden top-0 left-0 bottom-0 right-0 text-3xl flex flex-col bg-white dark:bg-gray-900 justify-center items-center gap-16"
       }>
       <li>
-        <Link onClick={handleToggleVisibility} to="home" smooth={true} duration={500}>
+        <MenuButton onClick={handleToggleVisibility} linkTo="home">
           Home
-        </Link>
+        </MenuButton>
       </li>
       <li>
-        <Link onClick={handleToggleVisibility} to="experience" smooth={true} duration={500}>
+        <MenuButton onClick={handleToggleVisibility} linkTo="experience">
           Experience
-        </Link>
+        </MenuButton>
       </li>
 
       <li>
-        <Link onClick={handleToggleVisibility} to="education" smooth={true} duration={500}>
+        <MenuButton onClick={handleToggleVisibility} linkTo="education">
           Education
-        </Link>
+        </MenuButton>
       </li>
     </motion.ul>
   );

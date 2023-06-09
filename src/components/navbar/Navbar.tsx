@@ -10,18 +10,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className="fixed w-full h-[80px] flex justify-between items-center
-        px-4">
-      <div>
-        <h1 className="font-roboto text-xxl">YifanYang</h1>
+    <nav className="fixed w-full">
+      <div
+        className="max-w-5xl mx-auto h-[80px]
+              flex justify-between items-center
+              px-10 font-josefin
+              text-black dark:text-white">
+        <div>
+          <a href="/">
+            <h1 className="font-greatevibe text-2xl transition duration-100 dark:hover:text-pinkred">
+              Yifan Yang
+            </h1>
+          </a>
+        </div>
+
+        <DesktopMenu />
+
+        <HamburgerButton open={showHamburgerButton} onToggleOpen={handleToggleHamburgerButton} />
+
+        <MobileMenu
+          visible={showHamburgerButton}
+          onToggleVisibility={handleToggleHamburgerButton}
+        />
       </div>
-
-      <DesktopMenu />
-
-      <HamburgerButton open={showHamburgerButton} onToggleOpen={handleToggleHamburgerButton} />
-
-      <MobileMenu visible={showHamburgerButton} onToggleVisibility={handleToggleHamburgerButton} />
     </nav>
   );
 };

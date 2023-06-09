@@ -12,7 +12,10 @@ const Home = () => {
                 flex flex-col justify-center">
         <Avatar />
         <p className="text-xl text-teal-600 font-light">👋 Hi, my name is</p>
-        <h1 className="text-3xl sm:text-5xl text-teal-600 font-bold pb-2">Yifan Yang</h1>
+        <h1 className="text-3xl sm:text-5xl text-teal-600 dark:text-white font-bold pb-2">
+          Yifan&nbsp;
+          <span className="dark:text-pinkred">Yang</span>
+        </h1>
         <h2 className="text-xl sm:text-2xl text-teal-600 pb-10">I'm a Software Engineer.</h2>
         <TerminalWindow>
           <TypedGreetings />
