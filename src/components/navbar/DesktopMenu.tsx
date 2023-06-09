@@ -7,7 +7,12 @@ interface MenuButton {
 }
 const MenuButton: React.FC<MenuButton> = ({ linkTo, children }) => {
   return (
-    <Link to={linkTo} smooth={true} duration={500}>
+    <Link
+      to={linkTo}
+      smooth={true}
+      duration={500}
+      className="
+      cursor-pointer block">
       {children}
     </Link>
   );
@@ -15,7 +20,7 @@ const MenuButton: React.FC<MenuButton> = ({ linkTo, children }) => {
 
 const DesktopMenu = () => {
   return (
-    <ul className="hidden sm:flex justify-between gap-8 [&>li]:cursor-pointer">
+    <ul className="hidden sm:flex justify-between gap-8">
       <li>
         <MenuButton linkTo="home">Home</MenuButton>
       </li>
