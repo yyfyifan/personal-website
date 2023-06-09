@@ -1,9 +1,10 @@
 import { darkModeContext } from "./useDarkMode";
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
+import { useLocalStorage } from "react-use";
 
 const DarkModeContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode = true, setIsDarkMode] = useLocalStorage("dark-mode", true);
 
   return (
     <darkModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
