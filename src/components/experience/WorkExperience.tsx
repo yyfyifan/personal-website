@@ -48,21 +48,25 @@ const DesktopItem: React.FC<WorkExperienceProps> = (props) => {
 
   return (
     <div className={"hidden sm:block"}>
-      {/* First row */}
-      <div className="flex justify-between">
+      {/* First row: company name and location */}
+      <div className="flex justify-between items-center gap-32">
         {/* Left */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 font-bold">
           {logo && <img src={logo} className="h-3" />}
           <span>{companyName}</span>
         </div>
         {/* Right */}
-      </div>
-      ;{/* Second row */}
-      <div className="flex justify-between">
-        <div>{jobTitle}</div>
         <div>{location}</div>
       </div>
-      ;
+      {/* Second row: job title and date span */}
+      <div className="flex justify-between items-center">
+        <div>{jobTitle}</div>
+        <div>
+          <span>{start}</span>
+          <span> - </span>
+          <span>{end}</span>
+        </div>
+      </div>
     </div>
   );
 };

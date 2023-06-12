@@ -85,8 +85,7 @@ interface ExperienceContentProps {
 
 const ExperienceContent: React.FC<ExperienceContentProps> = ({ tab }) => {
   return (
-    <ul
-      className={classNames("flex flex-col justify-center items-stretch", "px-12 max-w-3xl gap-6")}>
+    <ul className={classNames("flex flex-col justify-center items-stretch", "px-12 gap-6")}>
       {tab === "work"
         ? works.map((exp) => (
             <li key={exp.start}>

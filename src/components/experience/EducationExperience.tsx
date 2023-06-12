@@ -41,7 +41,30 @@ const MobileItem: React.FC<EducationExperienceProps> = (props) => {
 };
 
 const DesktopItem: React.FC<EducationExperienceProps> = (props) => {
-  return <div className="hidden sm:block"></div>;
+  const { logo, school, degree, start, end, location } = props;
+  return (
+    <div className={"hidden sm:block"}>
+      {/* First row: school name and location */}
+      <div className="flex justify-between items-center gap-32">
+        {/* Left */}
+        <div className="flex items-center gap-2 font-bold">
+          {logo && <img src={logo} className="h-3" />}
+          <span>{school}</span>
+        </div>
+        {/* Right */}
+        <div>{location}</div>
+      </div>
+      {/* Second row: degree and date span */}
+      <div className="flex justify-between items-center gap-32">
+        <div>{degree}</div>
+        <div>
+          <span>{start}</span>
+          <span> - </span>
+          <span>{end}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const EducationExperience: React.FC<EducationExperienceProps> = (props) => {
