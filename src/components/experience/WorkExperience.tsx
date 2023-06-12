@@ -1,65 +1,80 @@
-import { Element } from "react-scroll";
-import SingleExperience from "./SingleExperience";
-import GoogleLogo from "../../assets/google.png";
-import YahooLogo from "../../assets/yahoo.png";
-import type { SingleExperienceProps } from "./SingleExperience";
+import classNames from "classnames";
+import { ImLocation2, ImCalendar } from "react-icons/im";
 
-const experiences: Array<SingleExperienceProps> = [
-  {
-    logo: YahooLogo,
-    companyName: "Yahoo",
-    start: "May 2023",
-    end: "Present",
-    jobTitle: "Sr. Software Engineer",
-    location: "Remote",
-  },
-  {
-    logo: GoogleLogo,
-    companyName: "Google",
-    start: "July 2020",
-    end: "Jan 2023",
-    jobTitle: "Software Engineer",
-    location: "Sunnyvale, CA",
-  },
-  {
-    companyName: "Changsha Commerce & Tourism College",
-    start: "Sep 2018",
-    end: "Dec 2018",
-    jobTitle: "Lecturer",
-    location: "Changsha, China",
-  },
-  {
-    companyName: "PowerChina Zhongnan Engineering Co., Ltd",
-    start: "Jan 2016",
-    end: "Jan 2018",
-    jobTitle: "Software Engineer",
-    location: "Changsha, China",
-  },
-];
+export interface WorkExperienceProps {
+  logo?: string;
+  companyName: string;
+  start: string;
+  end: string;
+  jobTitle: string;
+  location: string;
+}
 
-const WorkExperience = () => {
+const MobileItem: React.FC<WorkExperienceProps> = (props) => {
+  const { logo, companyName, start, end, jobTitle, location } = props;
+
   return (
-    <Element
-      as="section"
-      name="experience"
-      className="h-screen bg-pink-500
-          flex flex-col justify-center items-center">
-      <h2>Title</h2>
-      <ul className="w-full max-w-[500px] gap-2 flex flex-col justify-center items-stretch">
-        {experiences.map((exp) => (
-          <li key={exp.start}>
-            <SingleExperience
-              logo={exp.logo}
-              companyName={exp.companyName}
-              start={exp.start}
-              end={exp.end}
-              jobTitle={exp.jobTitle}
-              location={exp.location}
-            />
-          </li>
-        ))}
-      </ul>
-    </Element>
+    <div className={classNames("sm:hidden")}>
+      {/* First row: company logo + name */}
+      <div
+        className={classNames("flex justify-start items-center gap-2", "font-bold text-md", {
+          "text-lg": companyName.length <= 10,
+        })}>
+        {logo && <img src={logo} className="h-3" />}
+        <span>{companyName}</span>
+      </div>
+      {/* Second row: job title */}
+      <div>{jobTitle}</div>
+      {/* Third row: work date span */}
+      <div className="flex items-center gap-3">
+        <ImCalendar className="w-3" />
+        <div className="text-gray-400">
+          <span>{start}</span>
+          <span> - </span>
+          <span>{end}</span>
+        </div>
+      </div>
+      {/* Fourth row: location */}
+      <div className="flex items-center gap-3">
+        <ImLocation2 className="w-3" />
+        <div className="text-gray-400">{location}</div>
+      </div>
+    </div>
+  );
+};
+
+const DesktopItem: React.FC<WorkExperienceProps> = (props) => {
+  const { logo, companyName, start, end, jobTitle, location } = props;
+
+  return (
+    <div className={"hidden sm:block"}>
+      {/* First row */}
+      <div className="flex justify-between">
+        {/* Left */}
+        <div className="flex items-center gap-2">
+          {logo && <img src={logo} className="h-3" />}
+          <span>{companyName}</span>
+        </div>
+        {/* Right */}
+      </div>
+      ;{/* Second row */}
+      <div className="flex justify-between">
+        <div>{jobTitle}</div>
+        <div>{location}</div>
+      </div>
+      ;
+    </div>
+  );
+};
+
+const WorkExperience: React.FC<WorkExperienceProps> = (props) => {
+  return (
+    <div>
+      {/* Using two components for different viewpoint size is eaiser
+        to layout than with media-query CSS */}
+      <DesktopItem {...props} />
+      <MobileItem {...props} />
+    </div>
   );
 };
 WorkExperience.displayName = "WorkExperience";
