@@ -8,7 +8,10 @@ const Experience = () => {
   const [tabName, setTabName] = useState<TabName>("work");
 
   return (
-    <Element as="section" name="experience" className="h-screen text-teal-600 dark:text-gray-200">
+    <Element
+      as="section"
+      name="experience"
+      className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center">
       <h2 className=" text-4xl text-center mb-16">Experience</h2>
 
       <Tabs activeTab={tabName} setActiveTab={(name: TabName) => setTabName(name)} />
