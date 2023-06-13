@@ -26,10 +26,10 @@ const DesktopMenu = () => {
         <MenuButton linkTo="home">Home</MenuButton>
       </li>
       <li>
-        <MenuButton linkTo="experience">Experience</MenuButton>
+        <MenuButton linkTo="about">About</MenuButton>
       </li>
       <li>
-        <MenuButton linkTo="education">Education</MenuButton>
+        <MenuButton linkTo="experience">Experience</MenuButton>
       </li>
     </ul>
   );
