@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = {
+  pinkred: "#f9004d",
+};
+
 export default {
   darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -10,7 +15,10 @@ export default {
         greatevibe: "'Great Vibes', cursive",
       },
       colors: {
-        pinkred: "#f9004d",
+        pinkred: colors.pinkred,
+      },
+      borderColor: {
+        pinkred: colors.pinkred,
       },
     },
   },

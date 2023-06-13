@@ -6,7 +6,7 @@ const About = () => {
       as="section"
       name="about"
       className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center">
-      <h2 className="text-5xl text-center mb-16">About Me</h2>
+      <h2 className="text-5xl text-center mb-16 border-b-4 border-pinkred">About Me</h2>
     </Element>
   );
 };
