@@ -3,10 +3,9 @@ import DarkModeContextProvider from "./contexts/dark-mode/DarkModeContextProvide
 import { Navbar, SocialIcons } from "./components/navbar";
 import DarkModeSwitcher from "./components/DarkModeSwitcher";
 import { Experience } from "./components/experience";
-import { Education } from "./components/education";
 import { Home } from "./components/home";
-import Contacts from "./components/Contacts";
 import { About } from "./components/about";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -14,10 +13,11 @@ function App() {
       <div className="min-h-screen">
         <Navbar />
         <Home />
+        <About />
         <Experience />
-        <Education />
-        <Contacts />
+        <Footer />
 
+        {/* Floating gadgets */}
         <SocialIcons />
         <DarkModeSwitcher />
       </div>
