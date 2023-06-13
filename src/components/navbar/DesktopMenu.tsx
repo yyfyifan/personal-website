@@ -12,7 +12,7 @@ const MenuButton: React.FC<MenuButton> = ({ linkTo, children }) => {
       smooth={true}
       duration={500}
       className="
-      cursor-pointer block
+      cursor-pointer block text-xl
       transition duration-150 dark:hover:text-pinkred">
       {children}
     </Link>
