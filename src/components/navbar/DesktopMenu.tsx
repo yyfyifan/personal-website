@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-scroll";
 
 interface MenuButton {
   linkTo: string;
@@ -7,15 +6,13 @@ interface MenuButton {
 }
 const MenuButton: React.FC<MenuButton> = ({ linkTo, children }) => {
   return (
-    <Link
-      to={linkTo}
-      smooth={true}
-      duration={500}
+    <a
+      href={`#${linkTo}`}
       className="
-      cursor-pointer block text-xl
-      transition duration-150 dark:hover:text-pinkred">
+    cursor-pointer block text-xl
+    transition duration-150 dark:hover:text-pinkred">
       {children}
-    </Link>
+    </a>
   );
 };
 

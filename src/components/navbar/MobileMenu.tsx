@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 
 interface MenuButton {
   linkTo: string;
@@ -8,17 +7,15 @@ interface MenuButton {
 }
 const MenuButton: React.FC<MenuButton> = ({ linkTo, onClick: handleClick, children }) => {
   return (
-    <Link
-      to={linkTo}
-      smooth={true}
-      duration={500}
+    <a
+      href={`#${linkTo}`}
       onClick={handleClick}
       className="
       cursor-pointer block 
       transition duration-150 dark:hover:text-pinkred 
        ">
       {children}
-    </Link>
+    </a>
   );
 };
 

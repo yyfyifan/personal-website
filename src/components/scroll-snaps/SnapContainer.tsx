@@ -7,7 +7,7 @@ interface SnapContainerProps {
 }
 const SnapContainer: React.FC<SnapContainerProps> = ({ className, children }) => {
   return (
-    <div className={classNames("overflow-y-scroll snap-mandatory snap-y", className)}>
+    <div className={classNames("overflow-y-scroll scroll-smooth snap-mandatory snap-y", className)}>
       {children}
     </div>
   );

@@ -1,11 +1,10 @@
-import { Element } from "react-scroll";
 import TerminalWindow from "./TerminalWindow";
 import TypedGreetings from "./TypedGreetings";
 import Avatar from "./Avatar";
 
 const Home = () => {
   return (
-    <Element as="section" name="home" className="w-full h-screen text-center snap-start">
+    <section id="home" className="w-full h-screen text-center snap-start">
       {/* Container */}
       <div
         className="max-w-5xl mx-auto px-8 h-full
@@ -29,7 +28,7 @@ const Home = () => {
           <TypedGreetings />
         </TerminalWindow>
       </div>
-    </Element>
+    </section>
   );
 };
 Home.displayName = "Home";

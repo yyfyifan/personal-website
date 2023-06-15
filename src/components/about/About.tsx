@@ -1,10 +1,7 @@
-import { Element } from "react-scroll";
-
 const About = () => {
   return (
-    <Element
-      as="section"
-      name="about"
+    <section
+      id="about"
       className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center snap-start">
       <h2 className="text-5xl text-center mb-16 border-b-4 border-pinkred">About Me</h2>
       <div className="max-w-4xl grid sm:grid-cols-2 gap-8">
@@ -31,7 +28,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </Element>
+    </section>
   );
 };
 About.displayName = "About";
