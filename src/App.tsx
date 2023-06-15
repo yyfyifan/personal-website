@@ -1,7 +1,7 @@
 import "./App.css";
 import DarkModeContextProvider from "./contexts/dark-mode/DarkModeContextProvider";
 import { Navbar, SocialIcons } from "./components/navbar";
-import DarkModeSwitcher from "./components/DarkModeSwitcher";
+// import DarkModeSwitcher from "./components/DarkModeSwitcher";
 import { Experience } from "./components/experience";
 import { Home } from "./components/home";
 import { About } from "./components/about";
@@ -19,7 +19,7 @@ function App() {
 
         {/* Floating gadgets */}
         <SocialIcons />
-        <DarkModeSwitcher />
+        {/* <DarkModeSwitcher /> */}
       </div>
     </DarkModeContextProvider>
   );
