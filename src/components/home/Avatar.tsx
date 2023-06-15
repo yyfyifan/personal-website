@@ -1,12 +1,11 @@
-import AvatarImage from "../../assets/yifan.jpg";
-
+import AvatarImage from "../../assets/avatar.png";
+import classNames from "classnames";
 const Avatar = () => {
   return (
     <img
       src={AvatarImage}
       alt="portrait"
-      className="bg-gradient-to-b from-teal-500
-  rounded-full h-40 w-40 mx-auto mb-5"
+      className={classNames("bg-gray-300", "rounded-full h-40 w-40 mx-auto mb-5")}
     />
   );
 };
