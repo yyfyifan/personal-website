@@ -6,12 +6,12 @@ import { Experience } from "./components/experience";
 import { Home } from "./components/home";
 import { About } from "./components/about";
 import { Footer } from "./components/footer";
-
+import { SnapContainer } from "./components/scroll-snaps";
 function App() {
   return (
     <DarkModeContextProvider>
       {/* A snap container with full-page scrolling */}
-      <div className="h-screen overflow-y-scroll snap-mandatory snap-y">
+      <SnapContainer className="h-screen">
         <Navbar />
         <Home />
         <About />
@@ -21,7 +21,7 @@ function App() {
         {/* Floating gadgets */}
         <SocialIcons />
         {/* <DarkModeSwitcher /> */}
-      </div>
+      </SnapContainer>
     </DarkModeContextProvider>
   );
 }
