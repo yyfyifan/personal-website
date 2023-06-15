@@ -10,7 +10,8 @@ import { Footer } from "./components/footer";
 function App() {
   return (
     <DarkModeContextProvider>
-      <div className="min-h-screen">
+      {/* A snap container with full-page scrolling */}
+      <div className="h-screen overflow-y-scroll snap-mandatory snap-y">
         <Navbar />
         <Home />
         <About />

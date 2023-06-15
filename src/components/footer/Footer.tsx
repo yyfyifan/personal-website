@@ -3,7 +3,7 @@ import ContactIcon from "./ContactIcon";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-200 text-center py-10 flex flex-col items-center justify-center gap-10">
+    <footer className="text-gray-200 text-center py-10 flex flex-col items-center justify-center gap-10 snap-start">
       <section id="contacts" className="flex justify-center gap-16 py-3 text-4xl">
         <ContactIcon href="https://github.com/yyfyifan" icon={<AiFillGithub />} />
         <ContactIcon href="https://www.linkedin.com/in/yifanyang-swe/" icon={<AiFillLinkedin />} />

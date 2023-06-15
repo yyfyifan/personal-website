@@ -5,7 +5,7 @@ import Avatar from "./Avatar";
 
 const Home = () => {
   return (
-    <Element as="section" name="home" className="w-full h-screen text-center">
+    <Element as="section" name="home" className="w-full h-screen text-center snap-start">
       {/* Container */}
       <div
         className="max-w-5xl mx-auto px-8 h-full

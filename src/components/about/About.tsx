@@ -5,7 +5,7 @@ const About = () => {
     <Element
       as="section"
       name="about"
-      className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center">
+      className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center snap-start">
       <h2 className="text-5xl text-center mb-16 border-b-4 border-pinkred">About Me</h2>
       <div className="max-w-4xl grid sm:grid-cols-2 gap-8">
         <div className="sm:text-right text-2xl font-bold">

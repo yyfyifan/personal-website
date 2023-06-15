@@ -11,7 +11,7 @@ const Experience = () => {
     <Element
       as="section"
       name="experience"
-      className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center">
+      className="h-screen text-teal-600 dark:text-gray-200 flex flex-col justify-center items-center snap-start">
       <h2 className="text-5xl text-center mb-16 border-b-4 border-pinkred">Experience</h2>
 
       <Tabs activeTab={tabName} setActiveTab={(name: TabName) => setTabName(name)} />
