@@ -13,9 +13,10 @@ const Tabs: React.FC<TabsProps> = (props) => {
   const { activeTab, setActiveTab } = props;
   return (
     <div
-      className="flex items-center justify-center gap-10
-      text-2xl
-    ">
+      className={classNames(
+        "flex items-center justify-center gap-8 sm:gap-14",
+        "text-xl sm:text-2xl mb-2 sm:mb-8"
+      )}>
       <div
         onClick={() => setActiveTab("work")}
         className={classNames(

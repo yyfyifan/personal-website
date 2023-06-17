@@ -14,19 +14,16 @@ const MobileItem: React.FC<WorkExperienceProps> = (props) => {
   const { logo, companyName, start, end, jobTitle, location } = props;
 
   return (
-    <div className={classNames("sm:hidden")}>
+    <div className={classNames("sm:hidden text-md")}>
       {/* First row: company logo + name */}
-      <div
-        className={classNames("flex justify-start items-center gap-2", "font-bold text-md", {
-          "text-lg": companyName.length <= 10,
-        })}>
+      <div className={classNames("flex justify-start items-center gap-2", "font-bold")}>
         {logo && <img src={logo} className="h-3" />}
         <span>{companyName}</span>
       </div>
       {/* Second row: job title */}
       <div>{jobTitle}</div>
       {/* Third row: work date span */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 text-sm">
         <ImCalendar className="w-3" />
         <div className="text-gray-400">
           <span>{start}</span>
@@ -35,7 +32,7 @@ const MobileItem: React.FC<WorkExperienceProps> = (props) => {
         </div>
       </div>
       {/* Fourth row: location */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 text-sm">
         <ImLocation2 className="w-3" />
         <div className="text-gray-400">{location}</div>
       </div>
@@ -47,7 +44,7 @@ const DesktopItem: React.FC<WorkExperienceProps> = (props) => {
   const { logo, companyName, start, end, jobTitle, location } = props;
 
   return (
-    <div className={"hidden sm:block"}>
+    <div className={"hidden sm:block text-lg"}>
       {/* First row: company name and location */}
       <div className="flex justify-between items-center gap-32">
         {/* Left */}

@@ -14,8 +14,7 @@ const Experience = () => {
       <SectionHeader text="Experience" />
 
       <Tabs activeTab={tabName} setActiveTab={(name: TabName) => setTabName(name)} />
-      {/* Gap between the tab and content */}
-      <div className="h-10"></div>
+
       <ExperienceContent tab={tabName} />
     </section>
   );

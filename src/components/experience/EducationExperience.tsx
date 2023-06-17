@@ -14,16 +14,16 @@ export interface EducationExperienceProps {
 const MobileItem: React.FC<EducationExperienceProps> = (props) => {
   const { logo, school, degree, start, end, location } = props;
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden text-sm">
       {/* First row: school */}
-      <div className={classNames("flex justify-start items-center gap-2", "font-bold text-lg")}>
+      <div className={classNames("flex justify-start items-center gap-2", "font-bold")}>
         {logo && <img src={logo} className="h-3" />}
         <span>{school}</span>
       </div>
       {/* Second row: degree */}
       <div>{degree}</div>
       {/* Third row: date span */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 text-sm">
         <ImCalendar className="w-3" />
         <div className="text-gray-400">
           <span>{start}</span>
@@ -32,7 +32,7 @@ const MobileItem: React.FC<EducationExperienceProps> = (props) => {
         </div>
       </div>
       {/* Fourth row: location */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 text-sm">
         <ImLocation2 className="w-3" />
         <div className="text-gray-400">{location}</div>
       </div>
@@ -43,7 +43,7 @@ const MobileItem: React.FC<EducationExperienceProps> = (props) => {
 const DesktopItem: React.FC<EducationExperienceProps> = (props) => {
   const { logo, school, degree, start, end, location } = props;
   return (
-    <div className={"hidden sm:block"}>
+    <div className={"hidden sm:block text-lg"}>
       {/* First row: school name and location */}
       <div className="flex justify-between items-center gap-32">
         {/* Left */}
