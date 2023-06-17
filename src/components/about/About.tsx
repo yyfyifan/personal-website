@@ -1,4 +1,6 @@
 import classNames from "classnames";
+import { SectionHeader } from "../common";
+
 const About = () => {
   return (
     <section
@@ -8,13 +10,8 @@ const About = () => {
         "flex flex-col justify-center items-center snap-start",
         "px-10"
       )}>
-      <h2
-        className={classNames(
-          "text-2xl sm:text-5xl text-center",
-          "mb-4 sm:mb-16 border-b-4 border-pinkred"
-        )}>
-        About Me
-      </h2>
+      <SectionHeader text="About Me" />
+
       <div className="max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-8">
         <div className="text-md sm:text-2xl sm:text-right font-bold">
           <p>Hey there!</p>
