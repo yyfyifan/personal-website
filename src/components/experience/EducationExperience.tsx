@@ -1,9 +1,11 @@
 import classNames from "classnames";
 import React from "react";
 import { ImLocation2, ImCalendar } from "react-icons/im";
+import { StaticImageData } from "next/image";
+import OrganizationLogo from "./OrganizationLogo";
 
 export interface EducationExperienceProps {
-  logo?: string;
+  logo?: StaticImageData;
   school: string;
   degree: string;
   start: string;
@@ -17,7 +19,7 @@ const MobileItem: React.FC<EducationExperienceProps> = (props) => {
     <div className="sm:hidden text-sm">
       {/* First row: school */}
       <div className={classNames("flex justify-start items-center gap-2", "font-bold")}>
-        {logo && <img src={logo} className="h-3" />}
+        {logo && <OrganizationLogo name={school} src={logo} />}
         <span>{school}</span>
       </div>
       {/* Second row: degree */}
@@ -48,7 +50,7 @@ const DesktopItem: React.FC<EducationExperienceProps> = (props) => {
       <div className="flex justify-between items-center gap-32">
         {/* Left */}
         <div className="flex items-center gap-2 font-bold">
-          {logo && <img src={logo} className="h-3" />}
+          {logo && <OrganizationLogo name={school} src={logo} />}
           <span>{school}</span>
         </div>
         {/* Right */}

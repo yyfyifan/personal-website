@@ -2,9 +2,9 @@ import TerminalWindow from "./TerminalWindow";
 import TypedGreetings from "./TypedGreetings";
 import Avatar from "./Avatar";
 
-const Home = () => {
+const Hero = () => {
   return (
-    <section id="home" className="w-full h-screen text-center snap-start">
+    <section id="hero" className="w-full h-screen text-center snap-start">
       {/* Container */}
       <div
         className="max-w-5xl mx-auto px-8 h-full
@@ -21,7 +21,7 @@ const Home = () => {
           <h2
             className="text-xl sm:text-2xl text-teal-600 dark:text-white 
             tracking-widest font-light mb-10">
-            I'm a Software Engineer.
+            I&apos;m a Software Engineer.
           </h2>
         </div>
         <TerminalWindow>
@@ -31,5 +31,5 @@ const Home = () => {
     </section>
   );
 };
-Home.displayName = "Home";
-export default Home;
+Hero.displayName = "Hero";
+export default Hero;

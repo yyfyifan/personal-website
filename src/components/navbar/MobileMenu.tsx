@@ -40,7 +40,7 @@ const MobileMenu: React.FC<{ visible: boolean; onToggleVisibility: () => void }>
         "fixed sm:hidden top-0 left-0 bottom-0 right-0 text-3xl flex flex-col bg-white dark:bg-gray-900 justify-center items-center gap-16"
       }>
       <li>
-        <MenuButton onClick={handleToggleVisibility} linkTo="home">
+        <MenuButton onClick={handleToggleVisibility} linkTo="hero">
           Home
         </MenuButton>
       </li>
