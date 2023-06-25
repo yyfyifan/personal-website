@@ -8,7 +8,6 @@ const Hero = () => {
       {/* Container */}
       <div
         className="max-w-5xl mx-auto px-8 h-full
-                font-roboto
                 flex flex-col justify-center">
         <div className="mb-20">
           <Avatar />

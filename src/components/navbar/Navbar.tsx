@@ -20,7 +20,7 @@ const Navbar = () => {
               text-black dark:text-white">
         <div>
           <a href="/">
-            <h1 className="font-greatevibe text-2xl sm:text-3xl transition duration-100 dark:hover:text-pinkred">
+            <h1 className="font-greatevibes text-2xl sm:text-3xl transition duration-100 dark:hover:text-pinkred">
               Yifan Yang
             </h1>
           </a>

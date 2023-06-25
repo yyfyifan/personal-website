@@ -18,9 +18,8 @@ const tailwindConfig = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        roboto: "'Roboto', sans-serif",
-        josefin: "'Josefin Sans', sans-serif",
-        greatevibe: "'Great Vibes', cursive",
+        josefin: ["var(--font-josefin-sans)", "sans-serif"],
+        greatevibes: ["var(--font-greatevibes)", "cursive"],
       },
       colors: {
         pinkred: colors.pinkred,

@@ -1,9 +1,8 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
 import { DarkModeContextProvider } from "@/contexts";
 import { SnapContainer } from "@/components/scroll-snaps";
-
-const inter = Inter({ subsets: ["latin"] });
+import { greatVibes, josefinSans, inter } from "@/fonts";
+import classNames from "classnames";
 
 export const metadata = {
   title: "Yifan Yang",
@@ -12,8 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html
+      lang="en"
+      className={classNames(
+        greatVibes.variable,
+        josefinSans.variable,
+        inter.variable,
+        inter.className
+      )}>
+      <body>
         <DarkModeContextProvider>
           {/* A snap container with full-page scrolling */}
           <SnapContainer className="h-screen">{children}</SnapContainer>
