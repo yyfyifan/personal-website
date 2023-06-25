@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";

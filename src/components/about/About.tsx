@@ -16,8 +16,8 @@ const About = () => {
         <div className="text-md sm:text-2xl sm:text-right font-bold">
           <p>Hey there!</p>
           <p>
-            I'm an experienced Software Engineer who's all about diving into the exciting world of
-            technology.
+            I&apos;m an experienced Software Engineer who&apos;s all about diving into the exciting
+            world of technology.
           </p>
         </div>
         <div className="text-sm sm:text-xl">

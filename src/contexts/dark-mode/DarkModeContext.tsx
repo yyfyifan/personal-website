@@ -1,9 +1,28 @@
-import { darkModeContext } from "./useDarkMode";
+"use client";
+
 import React from "react";
 import classNames from "classnames";
 import { useLocalStorage } from "react-use";
 
-const DarkModeContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+import { createContext, useContext } from "react";
+
+interface DarkModeProviderProps {
+  isDarkMode: boolean;
+  setIsDarkMode: (darkMode: boolean) => void;
+}
+
+const darkModeContext = createContext<DarkModeProviderProps | null>(null);
+
+export const useDarkMode = () => {
+  const contextData = useContext(darkModeContext);
+  if (!contextData) {
+    throw new Error("This hook must be called inside the DarkModeContextProvider!");
+  }
+
+  return contextData;
+};
+
+export const DarkModeContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isDarkMode = true, setIsDarkMode] = useLocalStorage("dark-mode", true);
 
   return (
@@ -18,5 +37,3 @@ const DarkModeContextProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     </darkModeContext.Provider>
   );
 };
-
-export default DarkModeContextProvider;

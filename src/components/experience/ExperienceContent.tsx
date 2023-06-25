@@ -1,10 +1,10 @@
 import classNames from "classnames";
-import GoogleLogo from "../../assets/google.png";
-import YahooShortLogo from "../../assets/yahoo-short.png";
-import ColumbiaLogo from "../../assets/columbia-university-white.png";
-import ManchesterLogo from "../../assets/manchester-university.png";
-import NCEPULogo from "../../assets/ncepu-white.png";
-import UCLLogo from "../../assets/ucl.png";
+import GoogleLogo from "@/assets/google.png";
+import YahooShortLogo from "@/assets/yahoo-short.png";
+import ColumbiaLogo from "@/assets/columbia-university-white.png";
+import ManchesterLogo from "@/assets/manchester-university.png";
+import NCEPULogo from "@/assets/ncepu-white.png";
+import UCLLogo from "@/assets/ucl.png";
 import type { WorkExperienceProps } from "./WorkExperience";
 import type { EducationExperienceProps } from "./EducationExperience";
 import WorkExperience from "./WorkExperience";

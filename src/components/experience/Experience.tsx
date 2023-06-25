@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import type { TabName } from "./Tabs";
 import Tabs from "./Tabs";

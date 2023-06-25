@@ -20,7 +20,7 @@ const DesktopMenu = () => {
   return (
     <ul className="hidden sm:flex justify-between gap-8">
       <li>
-        <MenuButton linkTo="home">Home</MenuButton>
+        <MenuButton linkTo="hero">Home</MenuButton>
       </li>
       <li>
         <MenuButton linkTo="about">About</MenuButton>

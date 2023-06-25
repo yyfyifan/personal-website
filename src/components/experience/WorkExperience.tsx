@@ -1,8 +1,10 @@
 import classNames from "classnames";
+import { StaticImageData } from "next/image";
 import { ImLocation2, ImCalendar } from "react-icons/im";
+import OrganizationLogo from "./OrganizationLogo";
 
 export interface WorkExperienceProps {
-  logo?: string;
+  logo?: StaticImageData;
   companyName: string;
   start: string;
   end: string;
@@ -17,7 +19,7 @@ const MobileItem: React.FC<WorkExperienceProps> = (props) => {
     <div className={classNames("sm:hidden text-md")}>
       {/* First row: company logo + name */}
       <div className={classNames("flex justify-start items-center gap-2", "font-bold")}>
-        {logo && <img src={logo} className="h-3" />}
+        {logo && <OrganizationLogo name={companyName} src={logo} />}
         <span>{companyName}</span>
       </div>
       {/* Second row: job title */}
@@ -49,7 +51,7 @@ const DesktopItem: React.FC<WorkExperienceProps> = (props) => {
       <div className="flex justify-between items-center gap-32">
         {/* Left */}
         <div className="flex items-center gap-2 font-bold">
-          {logo && <img src={logo} className="h-3" />}
+          {logo && <OrganizationLogo name={companyName} src={logo} />}
           <span>{companyName}</span>
         </div>
         {/* Right */}

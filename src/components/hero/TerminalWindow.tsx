@@ -11,7 +11,7 @@ const TerminalWindow: React.FC<{ children: React.ReactNode }> = ({ children }) =
         <div className="h-3 w-3 rounded-full bg-[#00CA4E]"></div>
       </div>
       <div
-        className="px-3 py-2 bg-gray-500 text-sm sm:text-xl
+        className="px-3 py-2 min-h-[44px] bg-gray-500 text-sm sm:text-xl
                     text-center font-mono text-yellow-500">
         {children}
       </div>
