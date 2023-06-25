@@ -5,7 +5,7 @@ import { greatVibes, josefinSans, inter } from "@/fonts";
 import classNames from "classnames";
 
 export const metadata = {
-  title: "Yifan Yang",
+  title: "Yifan Yang | Software Engineer",
   description: "Yifan Yang's Personal Website",
 };
 
