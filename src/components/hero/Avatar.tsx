@@ -8,6 +8,7 @@ const Avatar = () => {
       src={AvatarImage}
       alt="hero"
       className={classNames("bg-gray-300", "rounded-full h-40 w-40 mx-auto mb-5")}
+      priority
       placeholder={"blur"}
     />
   );
