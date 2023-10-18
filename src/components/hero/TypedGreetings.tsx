@@ -12,7 +12,7 @@ const TypedGreetings = () => {
         'System.out.println("Hello");', // Java
         'std::cout &lt;&lt; "Hello" &lt;&lt; std::endl;', // C++
         'console.log("Hello");', // JavaScript
-        'fmt.Println("Hello")',
+        'fmt.Println("Hello")', // Golang
         'Console.WriteLine("Hello");', // C#
         'print("Hello")', // Python
         'echo "Hello";', // Shell
