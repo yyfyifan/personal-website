@@ -9,12 +9,13 @@ const TypedGreetings = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        'System.out.println("Hello");',
-        'std::cout &lt;&lt; "Hello" &lt;&lt; std::endl;',
-        'console.log("Hello");',
-        'Console.WriteLine("Hello");',
-        'print("Hello")',
-        'echo "Hello";',
+        'System.out.println("Hello");', // Java
+        'std::cout &lt;&lt; "Hello" &lt;&lt; std::endl;', // C++
+        'console.log("Hello");', // JavaScript
+        'fmt.Println("Hello")',
+        'Console.WriteLine("Hello");', // C#
+        'print("Hello")', // Python
+        'echo "Hello";', // Shell
       ],
       typeSpeed: 50,
       loop: true,
