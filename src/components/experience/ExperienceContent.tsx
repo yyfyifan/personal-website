@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import GoogleLogo from "@/assets/google.png";
 import YahooShortLogo from "@/assets/yahoo-short.png";
+import LinkedinLogo from "@/assets/linkedin.png";
 import ColumbiaLogo from "@/assets/columbia-university-white.png";
 import ManchesterLogo from "@/assets/manchester-university.png";
 import NCEPULogo from "@/assets/ncepu-white.png";
@@ -13,10 +14,18 @@ import type { TabName } from "./Tabs";
 
 const works: Array<WorkExperienceProps> = [
   {
+    logo: LinkedinLogo,
+    companyName: "Linkedin",
+    start: "July 2024",
+    end: "Present",
+    jobTitle: "Sr. Software Engineer",
+    location: "Mountain View, CA",
+  },
+  {
     logo: YahooShortLogo,
     companyName: "Yahoo",
     start: "May 2023",
-    end: "Present",
+    end: "July 2024",
     jobTitle: "Sr. Software Engineer",
     location: "Mountain View, CA",
   },
