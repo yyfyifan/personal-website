@@ -2,6 +2,8 @@ import classNames from "classnames";
 import GoogleLogo from "@/assets/google.png";
 import YahooShortLogo from "@/assets/yahoo-short.png";
 import LinkedinLogo from "@/assets/linkedin.png";
+import PowerChinaLogo from "@/assets/powerchina.jpg";
+
 import ColumbiaLogo from "@/assets/columbia-university-white.png";
 import ManchesterLogo from "@/assets/manchester-university.png";
 import NCEPULogo from "@/assets/ncepu-white.png";
@@ -45,6 +47,7 @@ const works: Array<WorkExperienceProps> = [
     location: "Changsha, China",
   },
   {
+    logo: PowerChinaLogo,
     companyName: "PowerChina Zhongnan Eng. Co., Ltd",
     start: "Jan 2016",
     end: "Jan 2018",
